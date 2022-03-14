@@ -12,8 +12,10 @@ def main():
 
     PATH = ""
     with open('path.txt') as path:
-        PATH = "C:\\Dev\\chromedriver.exe" if len(path.read())  else "C:\\Dev\\chromedriver.exe"
+        PATH = path.readlines() if len(path.read())  else "C:\\Dev\\chromedriver.exe"
 
+
+    PATH = "C:\\Dev\\chromedriver.exe"
     driver = webdriver.Chrome(PATH)
 
     # Change it in the future
@@ -22,18 +24,18 @@ def main():
     try:
         # For later use
         modes = WebDriverWait(driver, 20).until(
-            EC.presence_of_all_elements_located((By.CLASS_NAME, "gwt-Anchor"))
-        )
+                EC.presence_of_all_elements_located((By.CLASS_NAME, "gwt-Anchor"))
+                )
 
         # modes[1].click()
 
         panel = WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.CLASS_NAME, "inputPanel"))
-        )
+                EC.presence_of_element_located((By.CLASS_NAME, "inputPanel"))
+                )
         # Take text from the text field
-        content = panel.text[:-21]
-        print(content)
+        content = panel.text[:-22]
 
+        # Wait for the text field to unlock
         time.sleep(4)
 
         textBar = driver.find_element_by_class_name("txtInput")
@@ -46,7 +48,7 @@ def main():
             # time.sleep(2/100) # less legit
     finally:
         pass
-        # time.sleep(5)
+        time.sleep(5)
         # driver.quit()
 
 if __name__ == '__main__':
