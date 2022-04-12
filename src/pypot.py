@@ -10,6 +10,7 @@ import random
 
 def main():
 
+    # What is this joke?
     PATH = ""
     with open('path.txt') as path:
         PATH = path.readlines() if len(path.read())  else "C:\\Dev\\chromedriver.exe"
