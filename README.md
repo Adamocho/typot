@@ -17,6 +17,6 @@ Either way, enjoy!
 
 To start the program, simply type
 ```bash
-$ python[3] pypot.py
+python[3] pypot.py
 ```
 in the terminal, then, when the website fires up, click `aggree` when asked for cookies, and quickly choose your desired game mode. For now, this bot cannot make any typos, so even an **INSTANT DEATH MODE** looks like a joke at this point.
