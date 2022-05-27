@@ -7,6 +7,7 @@ place for ideas, todo lists and more
 
 ## IDEAS
 
+- set specific wpm
 - legitness level from 1 to 9, intentional mistakes?
 - support for other browsers
 - support for websites other than typeracer
